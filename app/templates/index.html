@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WakeField_Insurance</title>
+    <style>
+        form{
+            width: 250px;
+            height: auto;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: groove;
+            border-color: red;
+            padding: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <form method="post">
+
+        {% csrf_token %}
+        <label>Age</label>
+        <input type="number" name="age"><br><br>
+        <label>Sex</label>
+        <select name="sex">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select><br><br>
+        <label>BMI</label>
+        <input type="text" name="bmi"><br><br>
+        <label>Childern</label>
+        <select name="Childern">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+        <label>Smoker</label>
+        <select name="Smoker">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+        <label>Region</label>
+        <select name="Region">
+            <option value="0">northeast</option>
+            <option value="1">northwest</option>
+            <option value="2">southeast</option>
+            <option value="3">southwest</option>
+        </select><br><br>
+        <input type="submit" value="submit">
+    </form>
+    {{ result }}
+    
+</body>
+</html>
