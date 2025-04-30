@@ -8,29 +8,31 @@
         form{
             width: 250px;
             height: auto;
-            margin-top: 50px;
+            margin-top: 80px;
             margin-left: auto;
             margin-right: auto;
             border-style: groove;
             border-color: red;
             padding: 20px;
+            border-width: 5px;
         }
        
     </style>
 </head>
 <body>
     <form method="post">
+        <caption>WakeField Insurance Predictor</caption><br><br>
 
         {% csrf_token %}
         <label>Age</label>
-        <input type="number" name="age"><br><br>
+        <input type="number" name="age" required><br><br>
         <label>Sex</label>
         <select name="sex">
             <option value="0">Male</option>
             <option value="1">Female</option>
         </select><br><br>
         <label>BMI</label>
-        <input type="text" name="bmi"><br><br>
+        <input type="text" name="bmi" required><br><br>
         <label>Childern</label>
         <select name="Childern">
             <option value="1">1</option>
@@ -51,9 +53,11 @@
             <option value="2">southeast</option>
             <option value="3">southwest</option>
         </select><br><br>
-        <input type="submit" value="submit">
+        <input type="submit" value="submit"><br><br>
+        <label>Premium Monthly : </label>
+        <input type="text" value="{{ result }}" >
     </form>
-    {{ result }}
+   
     
 </body>
 </html>
